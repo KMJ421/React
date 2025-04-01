@@ -50,7 +50,7 @@ function App() {
       return "TIE";
     }
     else if(user.name === "Rock"){
-      return computer.name=="Scissors"?"WIN":"LOSE"
+      return computer.name==="Scissors"?"WIN":"LOSE"
     }
     else if(user.name === "Scissors")
       return computer.name === "Paper"?"WIN":"LOSE"
@@ -63,7 +63,7 @@ function App() {
       return "TIE";
     }
     else if(user.name === "Rock"){
-      return computer.name=="Scissors"?"LOSE":"WIN"
+      return computer.name==="Scissors"?"LOSE":"WIN"
     }
     else if(user.name === "Scissors")
       return computer.name === "Paper"?"LOSE":"WIN"
