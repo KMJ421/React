@@ -5,7 +5,7 @@ import Box from "./component/Box"
 const choice = {
   rock:{
     name:"Rock",
-    img:"https://emojigraph.org/media/joypixels/rock_1faa8.png"
+    img:"https://emojigraph.org/media/joypixels/rock_1faa8.png",
   },
   scissors:{
     name:"Scissors",
@@ -47,28 +47,28 @@ function App() {
 
   const judgement = (user, computer) => {
     if(user.name === computer.name){
-      return "TIE";
+      return "tie";
     }
     else if(user.name === "Rock"){
-      return computer.name==="Scissors"?"WIN":"LOSE"
+      return computer.name==="Scissors"?"win":"lose"
     }
     else if(user.name === "Scissors")
-      return computer.name === "Paper"?"WIN":"LOSE"
+      return computer.name === "Paper"?"win":"lose"
     else if(user.name === "Paper")
-      return computer.name === "Rock"?"WIN":"LOSE"
+      return computer.name === "Rock"?"win":"lose"
   }
 
   const reJudgement =  (user, computer) => {
     if(user.name === computer.name){
-      return "TIE";
+      return "tie";
     }
     else if(user.name === "Rock"){
-      return computer.name==="Scissors"?"LOSE":"WIN"
+      return computer.name==="Scissors"?"lose":"win"
     }
     else if(user.name === "Scissors")
-      return computer.name === "Paper"?"LOSE":"WIN"
+      return computer.name === "Paper"?"lose":"win"
     else if(user.name === "Paper")
-      return computer.name === "Rock"?"LOSE":"WIN"
+      return computer.name === "Rock"?"lose":"win"
   }
 
 
