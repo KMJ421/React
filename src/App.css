@@ -1,16 +1,27 @@
 .box{
-  width: 500px;
+  width: 400px;
   text-align: center;
+  border-radius: 20px;
+  margin: 0 20px;
 }
 
 .item-img{
-  width: 500px;
+  width: 400px;
   text-align: center;
 }
 
 .main{
   display: flex; /*가로정렬*/
   justify-content: center; /*중앙정렬*/
+}
+
+.buttonIcon{
+  display: flex; /*가로정렬*/
+  justify-content: center; /*중앙정렬*/
+}
+
+h1 {
+  text-align: center;
 }
 
 button {
@@ -22,4 +33,28 @@ button {
 button:hover {
   background-color: rgb(240, 240, 240);
   border-radius: 50px;
+}
+
+@media (max-width: 600px) {
+  .main {
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;     /* 중앙 정렬 */
+  }
+
+  .box {
+    width: 60%;
+    margin: 10px 0;
+  }
+
+  .item-img {
+    width: 50%;
+  }
+
+  h1{
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 30px;
+  }
 }

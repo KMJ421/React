@@ -21,8 +21,8 @@ function App() {
 
   const [userSelect, setUserSelect] = useState(null)
   const [computerSelect, setComputerSelect] = useState(null)
-  const [result, setResult] = useState("");
-  const [Cresult, setCresult] = useState("");
+  const [result, setResult] = useState("result");
+  const [Cresult, setCresult] = useState("result");
   
   const play = (userChoice) => {
     setUserSelect(choice[userChoice])
@@ -82,15 +82,16 @@ function App() {
 
   return (
     <div>
+      <h1>가위 바위 보 게임</h1>
       <div className="main">
         <Box title="You" item={userSelect} result={result} style={resultStyle(result)}/>
         <Box title="Computer" item={computerSelect} result={Cresult} style={resultStyle(Cresult)}/>
-    </div>
-    <div className="main">
-      <button onClick={() => play("scissors")}>✌️</button>
-      <button onClick={() => play("rock")}>✊</button>
-      <button onClick={() => play("paper")}>🖐️</button>
-    </div>
+      </div>
+      <div className="buttonIcon">
+        <button onClick={() => play("scissors")}>✌️</button>
+        <button onClick={() => play("rock")}>✊</button>
+        <button onClick={() => play("paper")}>🖐️</button>
+      </div>
     </div>
   );
 }
